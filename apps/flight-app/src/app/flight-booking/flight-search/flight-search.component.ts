@@ -2,11 +2,19 @@
 /* eslint-disable @angular-eslint/no-empty-lifecycle-method */
 import {Component, OnInit} from '@angular/core';
 import {FlightService} from '@flight-workspace/flight-lib';
+// import * as bookingDeps from '../flight-booking.standalone.module';
 
 @Component({
   selector: 'flight-search',
+  /* standalone: true,
+  imports: [
+    bookingDeps
+  ], */
   templateUrl: './flight-search.component.html',
-  styleUrls: ['./flight-search.component.css']
+  styleUrls: ['./flight-search.component.css'],
+  providers: [
+    // FlightService
+  ]
 })
 export class FlightSearchComponent implements OnInit {
 
